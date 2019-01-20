@@ -1,0 +1,21 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container list">
+    <h1 class="title">{{ .Title }}</h1>
+    {{ range $i, $page := .Paginator.Pages }}
+      {{ if $i }}<hr/> {{ end }}
+      <div class="pure-g flex-center">
+        <div class="pure-u-1 pure-u-sm-2-3">
+          <h3 class="post-list-title"><a href="{{ $page.URL }}">{{ $page.Title }}</a></h3>
+        </div>
+        <div class="pure-u-1 pure-u-sm-1-3 post-right">
+          <p>{{ $page.Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</p>
+        </div>
+      </div>
+      <p>{{ $page.Summary }}</p>
+    {{ end }}
+    {{ partial "pagination.html" . }}
+  </section>
+{{ end }}

@@ -1,0 +1,9 @@
+<nav class="navigation pure-g">
+  <section class="pure-u-1 nav-right">
+    {{ with .Site.Menus.main}}
+      {{ range . }}
+        <a href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+      {{ end }}
+    {{ end }}
+  </section>
+</nav>

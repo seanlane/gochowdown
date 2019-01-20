@@ -1,0 +1,196 @@
+// Based partially on SimpleGrid SCSS
+
+// Universal
+html,
+body {
+  margin: 0.5rem auto 0 ;
+  max-width: 80em;
+  padding: 0 20px;
+  left: 0;
+  top: 0;
+  font-size: 14px;
+}
+
+* {
+  font-family: $text-font-family;
+  color: $darkerGray;
+  line-height: $font-height;
+}
+
+// Typography
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: $font-weight-heavy;
+  color: $alt-fg-color;
+  //margin: 2.0rem 0;
+  // a { color: inherit; }
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.375rem; }
+h4 { font-size: 1.125rem; }
+h5 { font-size: 1rem; }
+h6 { font-size: 0.875rem; }
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:focus, &:hover { text-decoration: underline; }
+  sup { color: inherit; }
+}
+
+p {
+  margin: 1.0rem 0;
+  font-size: 1.125rem;
+  font-weight: $font-weight-regular;
+  line-height: $font-height;
+}
+
+b, strong { font-weight: 700; }
+
+code {
+  font-family: $code-font-family;
+  font-size: 1.0rem;
+  font-weight: $font-weight-light;
+  background-color: $alt-bg-color;
+  color: $fg-color;
+  padding: 0 0.3rem;
+}
+
+pre {
+  display: block;
+  font-family: $code-font-family;
+  font-size: 1.0rem;
+  font-weight: $font-weight-light;
+  line-height: 1.5rem;
+  margin: 1.5rem 0;
+  padding: 1.0rem;
+  overflow-x: auto;
+  code {
+    background-color: inherit;
+    color: inherit;
+    padding: 0;
+  }
+}
+
+blockquote {
+  border-left: 3px solid $alt-bg-color;
+  padding-left: 1.5rem;
+  font-weight: $font-weight-light;
+  font-style: italic;
+}
+
+.font-light { font-weight: $font-weight-light; }
+.font-regular { font-weight: $font-weight-regular; }
+.font-heavy { font-weight: $font-weight-heavy; }
+
+img { max-width: 100%; }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid $lightGray;
+    margin: 1.5em 0;
+    padding: 0;
+}
+
+//Tables
+
+th, td {
+  padding: 0.5rem;
+}
+table {
+  padding: 0;
+  border-collapse: collapse;
+  pre {
+    padding: 0;
+    margin: 1rem 0;
+  }
+}
+table tr:nth-child(2n) {
+  background-color: $lightestGray; 
+}
+table td, table th {
+  // border: 2px solid $alt-fg-color;
+}
+table tr:first-child th {
+  border-top: 0;
+}
+table tr:last-child td {
+  border-bottom: 0;
+}
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}
+
+
+// Utility
+
+.left { text-align: left; }
+.right { text-align: right; }
+.justify { text-align: justify; }
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 35.5em) {
+    text-align: left;
+  }     
+}
+
+.post-right {
+  text-align: right;
+  @media screen and (max-width: 35.5em) {
+    text-align: left;
+  }     
+}
+
+.post-list-title {
+  margin-bottom: 10px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fab { font-weight: $font-weight-regular; }
+.fas { font-weight: $font-weight-heavy; }
+
+.float-right { float: right; }
+.float-left { float: left; }
+
+// Index page
+
+.index-image { width: 250px; }
+.index-image-tall { width: 150px; }
+.index-container { margin-top: 50px; }
+.index-wrapper { 
+  margin: 0;
+  padding:0; 
+  display: flex;
+  flex-flow: column;
+}
+.index-image-container {
+  min-height: 150px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 0 5px;
+}

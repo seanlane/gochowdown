@@ -1,0 +1,34 @@
+// Fonts
+$text-font-family: Lato, Helvetica, sans-serif;;
+$heading-font-family: Lato, Helvetica, sans-serif;
+$code-font-family: 'Source Code Pro', 'Lucida Console', monospace;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-heavy: 700;
+$font-height: 1.4;
+
+// Grays
+$black: #000;
+$darkerGray: #222;
+$darkGray: #444;
+$gray: #666;
+$lightGray: #ccc;
+$lighterGray: #eee;
+$reallyLightGray: hsl(210, 9%, 96%);
+$lightestGray: #F8F8F8;
+$white: #fff;
+
+// Colors
+$blue: #0078e7;
+$bg-color: $white !default;
+$fg-color: $darkerGray !default;
+$alt-bg-color: #E0E0E0 !default;
+$alt-fg-color: $black !default;
+$link-color: $blue !default;
+
+// Colors inverted
+$bg-color-inverted: #212121 !default;
+$fg-color-inverted: #fafafa !default;
+$alt-bg-color-inverted: #424242 !default;
+$alt-fg-color-inverted: #fafafa !default;
+$link-color-inverted: #f44336 !default;

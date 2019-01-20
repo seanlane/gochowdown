@@ -1,0 +1,38 @@
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">{{ .Title }}</h1>
+        </div>
+        <div class="post-meta pure-g">
+          <div class="posted-on pure-u-1 pure-u-sm-1-3">
+            <i class="fas fa-calendar"></i>
+            <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+              {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
+            </time>
+          </div>
+          <div class="reading-time pure-u-1 pure-u-sm-1-3 post-center">
+            <i class="fas fa-clock"></i>
+            {{ i18n "readingTime" .ReadingTime }}
+          </div>
+          <div class="pure-u-1 pure-u-sm-1-3 post-right">
+            {{ with .Page.Params.Categories }}{{ partial "taxonomy/categories" . }}{{ end }}
+            {{ with .Page.Params.Tags }}{{ partial "taxonomy/tags" . }}{{ end }}
+          </div>
+        </div>
+      </header>
+      <div>
+        {{ .Content }}
+      </div>
+      {{ partial "posts/gh-comments" . }}
+      <footer>
+        {{ partial "posts/disqus" . }}
+      </footer>
+    </article>
+    {{ partial "posts/math" . }}
+  </section>
+{{ end }}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+    {{ with .Site.Params.keywords }}<meta name="keywords" content="{{ . }}">{{ end }}
+
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" integrity="sha256-oSrCnRYXvHG31SBifqP2PM1uje7SJUyX0nTwO2RJV54=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+  {{ if .Site.IsServer }}
+    {{ $cssOpts := (dict "targetPath" "css/gochowdown.css" "enableSourceMap" true ) }}
+    {{ $styles := resources.Get "scss/gochowdown.scss" | resources.ExecuteAsTemplate "style.gochowdown.css" . | toCSS $cssOpts }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+  {{ else }}
+    {{ $cssOpts := (dict "targetPath" "css/gochowdown.css" ) }}
+    {{ $styles := resources.Get "scss/gochowdown.scss" | resources.ExecuteAsTemplate "style.gochowdown.css" . | toCSS $cssOpts | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+  {{ end }}
+  
+  {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+  {{ end }}
+
+    <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | absURL }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | default "/images/favicon-16x16.png" | absURL }}" sizes="16x16">
+    {{ .Hugo.Generator }}
+  </head>
+  <body>
+    {{ partial "header.html" . }}
+    <main class="content">
+      {{ block "content" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    {{ if .Site.googleAnalytics }}
+      {{ template "_internal/google_analytics.html" . }}
+    {{ end }}
+  </body>
+</html>
