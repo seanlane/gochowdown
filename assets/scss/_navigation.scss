@@ -1,16 +1,18 @@
 .navigation {
   width: 100%;
+  background-image: url('/assets/tile.png'); 
+  padding: 1rem 0;
   a, span {
     display: inline;
     font-size: 1.2rem;
     font-family: $heading-font-family;
     font-weight: $font-weight-regular;
     line-height: $font-height;
-    color: $fg-color;
+    color: $bg-color;
   }
   a {
     &:hover, &:focus {
-      color: $link-color
+      text-decoration: underline;
     }
   }
 
@@ -63,6 +65,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    padding: 0 1rem;
     @media screen and (max-width: 48em) {
       justify-content: center;
     }

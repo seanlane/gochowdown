@@ -1,9 +1,16 @@
 <div class="tags">
-  <i class="fas fa-tag"></i>
-  {{- range $index, $el := . -}}
-    {{- if gt $index 0 }}
-      <span class="separator">•</span>
-    {{- end }}
-    <a href="{{ ( printf "tags/%s/" ( . | urlize | lower ) ) | relLangURL }}">{{ . }}</a>
-  {{- end -}}
+  <p class="clearfix">Tags:
+    {{ if (isset . 0) }} {{/* Hack to check if this is an array https://discourse.gohugo.io/t/how-to-check-if-a-variable-is-string-or-array/7460/7 */}}
+      {{ $humanized := apply . "humanize" "." }}
+      {{ $sorted := sort $humanized }}
+      {{ range first 1 $sorted }}
+        <a href="{{ ( printf "tags/%s/" ( . | urlize | lower ) ) | relLangURL }}"><span itemprop="keyword">{{ . }}</span></a>
+      {{ end }}
+      {{ range after 1 $sorted }}
+       &bull; <a href="{{ ( printf "tags/%s/" ( . | urlize | lower ) ) | relLangURL }}"><span itemprop="keyword">{{ . }}</span></a>
+      {{ end }}
+    {{ else }}
+      <a href="{{ ( printf "tags/%s/" ( . | urlize | lower ) ) | relLangURL }}"><span itemprop="keyword">{{ . | humanize }}</span></a>
+    {{ end }}
+  </p>
 </div>

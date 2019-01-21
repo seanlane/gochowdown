@@ -1,0 +1,5 @@
+<div class="categories">
+  <p class="clearfix">Category: 
+    <a href="{{ ( printf "category/%s/" ( . | urlize ) ) | relLangURL }}"><span itemprop="recipeCategory">{{ . | humanize }}</span></a>
+  </p>
+</div>

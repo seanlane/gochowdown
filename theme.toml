@@ -1,7 +1,7 @@
 name = "GoChowdown"
 license = "MIT"
 licenselink = "https://github.com/seanlane/gochowdown/blob/master/LICENSE.md"
-description = "A theme for Hugo based on the Chowdown Jekyll theme"
+description = "A recipe theme for Hugo based on the Chowdown Jekyll theme"
 homepage = "https://github.com/seanlane/gochowdown"
 tags = [
   "recipes",
