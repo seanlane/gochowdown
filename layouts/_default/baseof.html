@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" integrity="sha384-M86HUGbBFILBBZ9ykMAbT3nVb0+2C7yZlF8X2CiKNpDOQjKroMJqIeGZ/Le8N2Qp" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" integrity="sha384-b92sF+wDNTHrfEtRaYo+EpcA8FUyHOSXrdxKc9XB9kaaX1rSQAgMevW6cYeE5Bdv" crossorigin="anonymous">
-    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
   {{ if .Site.IsServer }}
     {{ $cssOpts := (dict "targetPath" "css/gochowdown.css" "enableSourceMap" true ) }}
     {{ $styles := resources.Get "scss/gochowdown.scss" | resources.ExecuteAsTemplate "style.gochowdown.css" . | toCSS $cssOpts }}
