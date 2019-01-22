@@ -6,7 +6,7 @@
           <a class="block relative bg-blue" href="{{ .RelPermalink}}">
             {{ with .Resources.ByType "image" }}
               {{ range first 1 . }}
-                <div class="image ratio bg-cover" style="background-image:url({{ .RelPermalink }});"></div>
+                <div class="image ratio bg-cover" style="background-image:url({{ .RelPermalink | absURL }});"></div>
               {{ end }}
             {{ else }}
               <div class="image ratio bg-cover"></div>
