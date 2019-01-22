@@ -1,6 +1,6 @@
 .navigation {
   width: 100%;
-  background-image: url('/assets/tile.png'); 
+  background-image: url($bg-blue-tile-url); 
   padding: 1rem 0;
   a, span {
     display: inline;
