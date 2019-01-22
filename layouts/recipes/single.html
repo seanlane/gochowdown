@@ -8,7 +8,7 @@
   {{ with .Resources.ByType "image" }}
   {{ range . }}
     <div class="xs-p2">
-      <img itemprop="image" src="{{ .RelPermalink | absURL }}" />
+      <img itemprop="image" src="{{$.Site.BaseURL}}{{ .RelPermalink }}" />
     </div>
   {{ end }}
   {{ end }}
@@ -77,8 +77,8 @@
       {{ range where $.Site.Pages "Title" $compTitle }}
         <h4 class="blue center">{{ .Title }}</h4>
         {{ range (.Resources.ByType "image") }}
-        <div class="image ratio bg-cover" style="background-image:url({{ .RelPermalink | absURL }});">
-          <img class="hide" itemprop="photo" src="{{ .RelPermalink | absURL }}" />
+        <div class="image ratio bg-cover" style="background-image:url({{$.Site.BaseURL}}{{ .RelPermalink }});">
+          <img class="hide" itemprop="photo" src="{{$.Site.BaseURL}}{{ .RelPermalink }}" />
         </div>
         {{ end }}
         {{ if .Params.Imagecredit }}
@@ -94,7 +94,7 @@
         <ul class="ingredients" itemprop="ingredients">
           {{ range .Params.Ingredients }}
           <li itemprop="ingredient">
-            {{ with ( . | markdownify) }}{{ partial "recipe_item.html" }}{{ end }}
+            {{ with ( . | markdownify) }}{{ partial "recipe_item.html" . }}{{ end }}
           </li>
           {{ end }}
         </ul>
@@ -103,7 +103,7 @@
         <ul itemprop="instructions">
           {{ range .Params.Directions }}
           <li>
-            {{ with ( . | markdownify) }}{{ partial "recipe_item.html" }}{{ end }}
+            {{ with ( . | markdownify) }}{{ partial "recipe_item.html" . }}{{ end }}
           </li>
           {{ end }}
         </ul>
