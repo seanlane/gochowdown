@@ -8,7 +8,7 @@
   {{ with .Resources.ByType "image" }}
   {{ range . }}
     <div class="xs-p2">
-      <img itemprop="image" src="{{ .RelPermalink }}" />
+      <img itemprop="image" src="{{ .RelPermalink | absURL }}" />
     </div>
   {{ end }}
   {{ end }}
@@ -77,8 +77,8 @@
       {{ range where $.Site.Pages "Title" $compTitle }}
         <h4 class="blue center">{{ .Title }}</h4>
         {{ range (.Resources.ByType "image") }}
-        <div class="image ratio bg-cover" style="background-image:url({{ .RelPermalink }});">
-          <img class="hide" itemprop="photo" src="{{ .RelPermalink }}" />
+        <div class="image ratio bg-cover" style="background-image:url({{ .RelPermalink | absURL }});">
+          <img class="hide" itemprop="photo" src="{{ .RelPermalink | absURL }}" />
         </div>
         {{ end }}
         {{ if .Params.Imagecredit }}
