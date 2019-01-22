@@ -1,0 +1,1 @@
+This is an example of content you can put on the homepage.

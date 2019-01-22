@@ -1,0 +1,44 @@
+baseURL: https://example.com
+disablePathToLower: true
+languageCode: en-us
+title: My Recipes
+theme: gochowdown
+googleAnalytics: 
+defaultcontentlanguage: en
+paginate: 20
+canonifyurls: true
+pygmentsstyle: monokai
+pygmentscodefences: true
+pygmentscodefencesguesssyntax: true
+pygmentsOptions: "linenos=table"
+permalinks:
+  posts: /posts/:year/:month/:title
+params:
+  author: John Doe
+  description: Recipes used by the Doe family
+  keywords: 'recipes'
+  favicon_32: /images/favicon-32x32.png
+  favicon_16: /images/favicon-16x16.png
+  footercontent: 
+  hidecredits: false
+  hidecopyright: false
+  custom_css: 
+    - style.css
+menu:
+  main:
+    - name: Home
+      weight: 1
+      url: /
+    - name: Category
+      weight: 2
+      url: /category/
+    - name: Cuisine
+      weight: 3
+      url: /cuisine/
+    - name: Tags
+      weight: 4
+      url: /tags/
+taxonomies:
+  category: category
+  cusine: cuisine
+  tag: tags
