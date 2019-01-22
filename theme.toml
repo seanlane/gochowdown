@@ -3,16 +3,8 @@ license = "MIT"
 licenselink = "https://github.com/seanlane/gochowdown/blob/master/LICENSE.md"
 description = "A recipe theme for Hugo based on the Chowdown Jekyll theme"
 homepage = "https://github.com/seanlane/gochowdown"
-tags = [
-  "recipes",
-  "responsive",
-  "simple",
-  "clean"
-]
-features = [
-  "analytics",
-  "favicon"
-]
+tags = ["recipes", "cooking", "responsive", "clean"]
+features = ["analytics", "favicon"]
 min_version = "0.49"
 
 [author]
