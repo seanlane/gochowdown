@@ -32,7 +32,9 @@
         <ul>
           <!-- list components that make up recipe -->
           {{ range . }}
-          <li>{{ . | markdownify}}</li>
+          <li>
+            {{ with ( . | markdownify) }}{{ partial "recipe_item.html" . }}{{ end }}
+          </li>
           {{ end }}
         </ul>
         {{ end }}
@@ -42,7 +44,9 @@
         <ul itemprop="ingredients">
           <!-- list ingredients that make up recipe -->
           {{ range . }}
-          <li itemprop="recipeIngredient">{{ . | markdownify }}</li>
+          <li itemprop="recipeIngredient">
+            {{ with ( . | markdownify) }}{{ partial "recipe_item.html" . }}{{ end }}
+          </li>
           {{ end }}
         </ul>
         {{ end }}
@@ -52,7 +56,8 @@
         <h4 class="blue mt0 mb2 xs-center">Directions</h4>
         <ul itemprop="recipeInstructions">
           {{ range .Params.Directions }}
-          <li>{{ . | markdownify }}</li>
+          <li>
+            {{ with ( . | markdownify) }}{{ partial "recipe_item.html" . }}{{ end }}</li>
           {{ end }}
         </ul>
       </div>
@@ -88,14 +93,18 @@
         <h4 class="blue regular xs-center">Ingredients</h4>
         <ul class="ingredients" itemprop="ingredients">
           {{ range .Params.Ingredients }}
-          <li itemprop="ingredient">{{ . | markdownify }}</li>
+          <li itemprop="ingredient">
+            {{ with ( . | markdownify) }}{{ partial "recipe_item.html" }}{{ end }}
+          </li>
           {{ end }}
         </ul>
         
         <h4 class="blue regular xs-center">Steps</h4>
         <ul itemprop="instructions">
           {{ range .Params.Directions }}
-          <li>{{ . | markdownify }}</li>
+          <li>
+            {{ with ( . | markdownify) }}{{ partial "recipe_item.html" }}{{ end }}
+          </li>
           {{ end }}
         </ul>
 
@@ -114,26 +123,4 @@
 
   </article>
 </div>
-
-<script type="text/javascript">
-  $( document ).ready(function() {
-    jQuery.fn.clickToggle = function(a,b) {
-      var ab=[b,a];
-      function cb(){ ab[this._tog^=1].call(this); }
-      return this.on("click", cb);
-    };
-    $("ul li").append('<input type="checkbox">');
-    $("ul li").clickToggle(function(){
-      $(this).children("input").prop('checked', true);
-      var height = $(this).height();
-      var y = $(window).scrollTop();
-      $('html, body').animate({scrollTop: y+height+16}, 200);
-    }, function(){
-      $(this).children("input").prop('checked', false);
-      var height = $(this).height();
-      var y = $(window).scrollTop();
-      $('html, body').animate({scrollTop: y-height-16}, 200);
-    });
-  });
-</script>
 {{ end }}

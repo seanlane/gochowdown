@@ -1263,7 +1263,9 @@ img{width:100%;}
 .no-line-height{line-height:0;}
 ul{margin:0; padding:0; list-style:none;}
 ul li{  padding:0 0 0 25px; position:relative; margin-top: 0.5rem;}
-ul li input{position: absolute; top:5px; left:0; opacity:0.5;}
+/*ul li input{
+  position: absolute; top:5px; left:0; min-height: 1rem; min-width: 1rem;
+}*/
 
 .bg-blue-tile{background: #007FFF url(../assets/tile.png); position:relative;}
 @media all and (min-width:40em){
@@ -1304,7 +1306,6 @@ a:hover .image{opacity:0.2;}
   .site-title:hover{bottom:-14px;}
   .recipes .sm-col{border-bottom:3px solid white}
 }
-
 
 .title-shadow {
   text-shadow: 1px 1px 4px black;
