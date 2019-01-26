@@ -5,12 +5,16 @@
 
 <div class="container" itemscope itemtype="http://schema.org/Recipe">
 <!-- call up the image and image credit link -->
-  {{ with .Resources.ByType "image" }}
-  {{ range . }}
+  {{ with .Params.Image }}
     <div class="xs-p2">
-      <img itemprop="image" src="{{$.Site.BaseURL}}{{ .RelPermalink }}" />
+      <img itemprop="image" src="{{ . }}" />
     </div>
-  {{ end }}
+  {{ else }}
+    {{ range first 1 (.Resources.ByType "image") }}
+      <div class="xs-p2">
+        <img itemprop="image" src="{{$.Site.BaseURL}}{{ .RelPermalink }}" />
+      </div>
+    {{ end }}
   {{ end }}
 
   <article class="post-content px2">
@@ -20,7 +24,7 @@
     </header>
 
     <div class="px2 mt3 clearfix">
-      <div class="sm-col-8 center mx-auto" itemprop="description">{{.Content}}</div>
+      <div class="sm-col-8 mx-auto" itemprop="description">{{.Content}}</div>
     </div>
 
     <!-- call up recipe and directions -->
