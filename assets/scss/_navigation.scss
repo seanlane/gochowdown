@@ -35,7 +35,9 @@
 
   .nav-title {
     letter-spacing: 0.1rem;
-    text-transform: uppercase;
+    padding-left: 1rem;
+    margin: 0;
+
   }
 
   .nav-left {
@@ -56,6 +58,7 @@
     justify-content: center;
     a { margin-left: 10px; }
     a:first-child { margin-left: 0; }
+    a:last-child { padding-right: 1rem; }
     @media screen and (max-width: 48em) {
       margin: 15px 0;
     }
@@ -65,11 +68,11 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 1rem;
     @media screen and (max-width: 48em) {
       justify-content: center;
     }
     a { margin-left: 20px; }
     a:first-child { margin-left: 0; }
+    a:last-child { padding-right: 1rem; }
   }
 }
