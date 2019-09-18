@@ -11,7 +11,7 @@
     {{ range .Paginator.Pages }}
     <div class="pure-g">
       <div class="pure-u-1">
-        <h3><a href="{{ .URL }}">{{ .Title }}</a></h3>
+        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
       </div>
     </div>
     {{ end }}

@@ -13,7 +13,7 @@
       {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}
     </div>
     <div class="pure-u-2-3">
-      <a href="{{ .URL }}">{{ .Title }}</a>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
     </div>
   </div>
   {{ end }}
