@@ -27,6 +27,24 @@
       <div class="sm-col-8 mx-auto" itemprop="description">{{.Content}}</div>
     </div>
 
+    <div class="clearfix mt3">
+      {{ with .Params.yield }}
+      <div class="sm-col sm-col-2">
+          <h4 class="blue mt0 mb2 xs-center">Yields: {{ . }}</h4>
+      </div>
+      {{ end }}
+      {{ with .Params.prepTime }}
+      <div class="sm-col sm-col-2">
+        <h4 class="blue mt0 mb2 xs-center">Preparation time: {{ . }}</h4>
+      </div>
+      {{ end }}
+      {{ with .Params.cookTime }}
+      <div class="sm-col sm-col-2">
+        <h4 class="blue mt0 mb2 xs-center">Cooking time: {{ . }}</h4>
+      </div>
+      {{ end }}
+    </div>
+
     <!-- call up recipe and directions -->
     <div class="clearfix mt3">
       <div class="sm-col sm-col-6 lg-col-6 recipeItems">
