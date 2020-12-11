@@ -84,20 +84,20 @@
         </ul>
       </div>
     </div>
-    <!-- end recipe and directions --> 
+    <!-- end recipe and directions -->
 
     <!-- check if it's a component-based recipe, render it -->
     {{ with .Params.Components }}
     <div class="components bg-darken-2 p2 mt3 mb3 center">
       &darr; This is a <strong class="blue">component-based recipe</strong> (fancy talk for making the dish in pieces, then assembling). &darr;
     </div>
-    
+
     <div class="clearfix mxn2">
     {{ range  . }}
       {{ $compTitle := . }}
       <div class="sm-col sm-col-4 px2 recipeItems">
       {{ range where $.Site.Pages "Title" $compTitle }}
-        <h4 class="blue center">{{ .Title }}</h4>
+        <h4 class="blue center"><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
         {{ range (.Resources.ByType "image") }}
         <div class="image ratio bg-cover" style="background-image:url({{$.Site.BaseURL}}{{ .RelPermalink }});">
           <img class="hide" itemprop="photo" src="{{$.Site.BaseURL}}{{ .RelPermalink }}" />
@@ -120,7 +120,7 @@
           </li>
           {{ end }}
         </ul>
-        
+
         <h4 class="blue regular xs-center">Steps</h4>
         <ul itemprop="instructions">
           {{ range .Params.Directions }}
@@ -134,9 +134,9 @@
       </div>
     {{ end }}
     </div>
-  
+
     {{ end }}
-    <!-- end components -->  
+    <!-- end components -->
     <br />
 
     {{ with .Params.Category }}{{ partial "taxonomy/category" . }}{{ end }}
