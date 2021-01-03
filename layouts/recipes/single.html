@@ -142,7 +142,33 @@
     {{ with .Params.Category }}{{ partial "taxonomy/category" . }}{{ end }}
     {{ with .Params.Cuisine }}{{ partial "taxonomy/cuisine" . }}{{ end }}
     {{ with .Params.Tags }}{{ partial "taxonomy/tags" . }}{{ end }}
+    
+    <div class="recipe-source">
+      {{ if (or .Params.SourceName .Params.AuthorName) }}
+        inspired
+      {{ end }}
 
+      {{ with .Params.SourceName }}
+        {{$name := .}}
+        by
+        {{with $.Params.SourceURL }}
+          <a href="{{.}}">{{$name}}</a>
+         {{else}}
+           {{$name}}
+         {{end}}
+      {{ end }}
+
+      {{with .Params.AuthorName}}
+        {{$name := .}}
+        from
+        {{with $.Params.AuthorURL }}
+          <a href="{{.}}">{{$name}}</a>
+         {{else}}
+           {{$name}}
+         {{end}}
+      {{end}}
+    </div>
+    
   </article>
 </div>
 {{ end }}
