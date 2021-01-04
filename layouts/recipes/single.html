@@ -30,17 +30,17 @@
     <div class="clearfix mt3">
       {{ with .Params.yield }}
       <div class="sm-col sm-col-2">
-          <h4 class="blue mt0 mb2 xs-center">Yields: {{ . }}</h4>
+          <h4 class="blue mt0 mb2 xs-center">{{ i18n "yields" }}: {{ . }}</h4>
       </div>
       {{ end }}
       {{ with .Params.prepTime }}
       <div class="sm-col sm-col-2">
-        <h4 class="blue mt0 mb2 xs-center">Preparation time: {{ . }}</h4>
+        <h4 class="blue mt0 mb2 xs-center">{{ i18n "prepTime" }}: {{ . }}</h4>
       </div>
       {{ end }}
       {{ with .Params.cookTime }}
       <div class="sm-col sm-col-2">
-        <h4 class="blue mt0 mb2 xs-center">Cooking time: {{ . }}</h4>
+        <h4 class="blue mt0 mb2 xs-center">{{ i18n "cookTime" }}: {{ . }}</h4>
       </div>
       {{ end }}
     </div>
@@ -62,7 +62,7 @@
         {{ end }}
 
         {{ with .Params.Ingredients }}
-        <h4 class="blue mt0 mb2 xs-center">Ingredients</h4>
+        <h4 class="blue mt0 mb2 xs-center">{{ i18n "ingredients" }}</h4>
         <ul itemprop="ingredients">
           <!-- list ingredients that make up recipe -->
           {{ range . }}
@@ -75,7 +75,7 @@
       </div>
 
       <div class="sm-col sm-col-6 lg-col-6 recipeItems">
-        <h4 class="blue mt0 mb2 xs-center">Directions</h4>
+        <h4 class="blue mt0 mb2 xs-center">{{ i18n "directions" }}</h4>
         <ul itemprop="recipeInstructions">
           {{ range .Params.Directions }}
           <li>
@@ -142,15 +142,15 @@
     {{ with .Params.Category }}{{ partial "taxonomy/category" . }}{{ end }}
     {{ with .Params.Cuisine }}{{ partial "taxonomy/cuisine" . }}{{ end }}
     {{ with .Params.Tags }}{{ partial "taxonomy/tags" . }}{{ end }}
-    
+
     <div class="recipe-source">
       {{ if (or .Params.SourceName .Params.AuthorName) }}
-        inspired
+        {{ i18n "inspired" }}
       {{ end }}
 
       {{ with .Params.SourceName }}
         {{$name := .}}
-        by
+        {{ i18n "by" }}
         {{with $.Params.SourceURL }}
           <a href="{{.}}">{{$name}}</a>
          {{else}}
@@ -160,7 +160,7 @@
 
       {{with .Params.AuthorName}}
         {{$name := .}}
-        from
+        {{ i18n "from" }}
         {{with $.Params.AuthorURL }}
           <a href="{{.}}">{{$name}}</a>
          {{else}}
