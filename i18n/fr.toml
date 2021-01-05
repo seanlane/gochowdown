@@ -13,6 +13,12 @@ other = "Ingrédients"
 [directions]
 other = "Instructions"
 
+[components]
+other = "Composantes"
+
+[steps]
+other = "Etapes"
+
 [category]
 other = "Catégorie"
 
