@@ -1,17 +1,17 @@
 [yields]
-other = "yields"
+other = "Yields"
 
 [prepTime]
-other = "prepTime"
+other = "Preparation time"
 
 [cookTime]
-other = "cookTime"
+other = "Cooking time"
 
 [ingredients]
-other = "ingredients"
+other = "Ingredients"
 
 [directions]
-other = "directions"
+other = "Directions"
 
 [components]
 other = "Components"
@@ -20,13 +20,13 @@ other = "Components"
 other = "Steps"
 
 [category]
-other = "category"
+other = "Category"
 
 [cuisine]
-other = "cuisine"
+other = "Cuisine"
 
 [tags]
-other = "tags"
+other = "Tags"
 
 [inspired]
 other = "inspired"
