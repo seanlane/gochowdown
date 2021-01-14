@@ -1,0 +1,74 @@
+[yields]
+other = "Zutaten für"
+
+[prepTime]
+other = "Vorbereitungszeit"
+
+[cookTime]
+other = "Koch-/Backzeit"
+
+[ingredients]
+other = "Zutaten"
+
+[directions]
+other = "Arbeitsschritte"
+
+[components]
+other = "Komponenten"
+
+[steps]
+other = "Arbeitsschritte"
+
+[category]
+other = "Kategorie"
+
+[cuisine]
+other = "Küche"
+
+[tags]
+other = "Tags"
+
+[inspired]
+other = "inspiriert"
+
+[by]
+other = "durch"
+
+[from]
+other = "von"
+
+[powered-by]
+other = "Powered by"
+
+[for-the-home-chef]
+other = "Für den Küchenchef"
+
+[save-recipes]
+other = "Speichern Sie Rezepte in Sekundenschnelle mit Klartextformatierung"
+
+[create-beautiful]
+other = "Erstellen Sie schöne Rezeptseiten mit automatisierter Leichtigkeit"
+
+[use-recipes]
+other = "Verwenden Sie Ihre Rezepte in jeder App"
+
+[our-favorite]
+other = "Unser Favorit ist"
+
+[share]
+other = "Teilen Sie mit Familie und Freunden"
+
+[for-the-developer]
+other = "Für den Entwickler"
+
+[markdown-hugo]
+other = "Markdown + Hugo under the hood"
+
+[recipes-stored]
+other = "Im Klartext gespeicherte Rezepte, bereit zum Hacken"
+
+[open-source]
+other = "Open source, alles ist auf GitHub"
+
+[contribute]
+other = "dazu beitragen"

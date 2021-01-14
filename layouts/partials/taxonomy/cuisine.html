@@ -1,5 +1,5 @@
 <div class="categories">
-  <p class="clearfix">Cuisine: 
+  <p class="clearfix">{{ i18n "cuisine"}}:
     <a href="{{ ( printf "cuisine/%s/" ( . | urlize ) ) | relLangURL }}"><span itemprop="recipeCuisine">{{ . | humanize }}</span></a>
   </p>
 </div>

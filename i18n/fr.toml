@@ -1,0 +1,74 @@
+[yields]
+other = "Pour"
+
+[prepTime]
+other = "Préparation"
+
+[cookTime]
+other = "Cuisson"
+
+[ingredients]
+other = "Ingrédients"
+
+[directions]
+other = "Instructions"
+
+[components]
+other = "Composantes"
+
+[steps]
+other = "Etapes"
+
+[category]
+other = "Catégorie"
+
+[cuisine]
+other = "Type de cuisine"
+
+[tags]
+other = "tags"
+
+[inspired]
+other = "Inspiré"
+
+[by]
+other = "par"
+
+[from]
+other = "de"
+
+[powered-by]
+other = "Propulsé par"
+
+[for-the-home-chef]
+other = "Pour les cuistots"
+
+[save-recipes]
+other = "Enregistrez vos recettes en quelques secondes au format texte brut"
+
+[create-beautiful]
+other = "Créez de magnifiques pages de recettes de façon automatique"
+
+[use-recipes]
+other = "Réutilisez vos recettes dans n'importe quelle app"
+
+[our-favorite]
+other = "notre préférée est"
+
+[share]
+other = "Partagez avec vos amis et votre famille"
+
+[for-the-developer]
+other = "Pour le développeur"
+
+[markdown-hugo]
+other = "Markdown + Hugo sous le capot"
+
+[recipes-stored]
+other = "Les recettes sont stockées en texte brut, prêtes à être hackées"
+
+[open-source]
+other = "Open source, tout est sur Github"
+
+[contribute]
+other = "contribuez"
