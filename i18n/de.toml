@@ -16,6 +16,15 @@ other = "Arbeitsschritte"
 [components]
 other = "Komponenten"
 
+[this-is-a]
+other = "Das ist ein"
+
+[component-based-recipe]
+other = "komponenten-basiertes Rezept"
+
+[fancy-talk]
+other = "ausgefallen formuliert um ein Gericht in Teilen anzurichten"
+
 [steps]
 other = "Arbeitsschritte"
 
