@@ -16,6 +16,15 @@ other = "Instructions"
 [components]
 other = "Composantes"
 
+[this-is-a]
+other = "C'est un"
+
+[component-based-recipe]
+other = "recette à base de composants"
+
+[fancy-talk]
+other = "fantaisie formulé pour servir un plat en morceaux"
+
 [steps]
 other = "Etapes"
 
