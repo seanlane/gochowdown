@@ -1,11 +1,11 @@
 ---
 layout: recipe
 date: {{ .Date }}
-draft: true    
-title:  "{{ replace .Name "-" " " | humanize | title }}" # The title of your awesome recipe
+draft: true
+title: "{{ replace .Name "-" " " | humanize | title }}" # The title of your awesome recipe
 image: awesome-recipe-image.jpg # Name of image in recipe bundle
 imagecredit: https://placekitten.com/600/800 # URL to image source page, website, or creator
-YouTubeID:  # The F2SYDXV1W1w part of https://www.youtube.com/watch?v=F2SYDXV1W1w
+YouTubeID: # The F2SYDXV1W1w part of https://www.youtube.com/watch?v=F2SYDXV1W1w
 authorName: # Name of the recipe/article author
 authorURL: # URL of their home website
 sourceName: # Name of the source website
@@ -15,7 +15,7 @@ cuisine: # The region associated with your recipe. For example, "French", Medite
 tags: # You don't have to have 3, feel free to have 10, 1, or none
   - tag1
   - tag2
-  - tag3 
+  - tag3
 yield: 8
 prepTime: 15
 cookTime: 45
