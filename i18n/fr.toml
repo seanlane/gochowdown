@@ -17,7 +17,7 @@ other = "Instructions"
 other = "Composantes"
 
 [this-is-a]
-other = "C'est un"
+other = "Ceci est une"
 
 [component-based-recipe]
 other = "recette à base de composants"
