@@ -16,6 +16,15 @@ other = "Directions"
 [components]
 other = "Components"
 
+[this-is-a]
+other = "This is a"
+
+[component-based-recipe]
+other = "component-based recipe"
+
+[fancy-talk]
+other = "fancy talk for making the dish in pieces, then assembling"
+
 [steps]
 other = "Steps"
 
