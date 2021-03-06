@@ -1,0 +1,86 @@
+# SPDX-License-Identifier: MIT
+# Copyright © 2021 Casper Meijn <casper@meijn.net>
+
+[yields]
+other = "Opbrengst"
+
+[prepTime]
+other = "Bereidingstijd"
+
+[cookTime]
+other = "Baktijd"
+
+[ingredients]
+other = "Ingrediënten"
+
+[directions]
+other = "Instructies"
+
+[components]
+other = "Onderdelen"
+
+[this-is-a]
+other = "Dit is een"
+
+[component-based-recipe]
+other = "component-gebaseerd recept"
+
+[fancy-talk]
+other = "een moeilijk woord voor een gerecht dat bestaat uit meerdere delen"
+
+[steps]
+other = "Stappen"
+
+[category]
+other = "Categorie"
+
+[cuisine]
+other = "Keuken"
+
+[tags]
+other = "Tags"
+
+[inspired]
+other = "Geïnspireerd"
+
+[by]
+other = "door"
+
+[from]
+other = "van"
+
+[powered-by]
+other = "Mogelijk gemaakt door"
+
+[for-the-home-chef]
+other = "Voor de thuiskok"
+
+[save-recipes]
+other = "Sla gerechten in enkele seconden op in platte tekst formaat"
+
+[create-beautiful]
+other = "Maak prachtige recept pagina's door middel van automatisering"
+
+[use-recipes]
+other = "Gebruik je recepten in iedere applicatie"
+
+[our-favorite]
+other = "onze favoriet is"
+
+[share]
+other = "Deel met familie en vrienden"
+
+[for-the-developer]
+other = "Voor de ontwikkelaar"
+
+[markdown-hugo]
+other = "Markdown + Hugo onder de moterkap"
+
+[recipes-stored]
+other = "Recepten in platte tekst, ready for hacking"
+
+[open-source]
+other = "Open source, alles staat op GitHub"
+
+[contribute]
+other = "help je mee"
