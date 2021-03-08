@@ -11,7 +11,7 @@ A theme for [Hugo](https://gohugo.io/) based on the [Chowdown](https://github.co
 0. Install Hugo with your favorite package manager, or follow their [Installation Guide](https://gohugo.io/getting-started/installing/)
     - Note that the _extended_ version of Hugo is required since this theme needs SCSS support. At the time of writing, this is the version found by installing via [HomeBrew](https://github.com/Homebrew/homebrew-core/blob/master/Formula/hugo.rb) and the [Arch User Repository](https://www.archlinux.org/packages/community/x86_64/hugo/). If that isn't the case for your package manager, then install using `$ go install --tags extended` as documented in the Hugo Install Docs.
 1. Add the repository into your Hugo Project repository as a submodule, `git submodule add https://github.com/seanlane/gochowdown.git themes/gochowdown`.
-2. Configure your `config.toml` or `config.yaml`.
+2. Configure your `config.toml` or `config.yaml`. Default language is English. [Read this section](#change-the-default-language) to modify the default language.
 3. Build your site with `hugo serve` and see the result at `http://localhost:1313/`.
 
 ## Using this theme
@@ -29,6 +29,21 @@ Note that this is a work in progress, so things may be broken or change in the f
 ### Add a new recipe with components
 
 Similar to above, but instead of adding the recipes to the `content/recipes` directory, add the individual components to the `content/components` directory. Then add a new recipe as you normally would, and replace the instructions list with a components list, using the title (aka name) of the recipe, and modify the directions section as needed.
+
+### Change the default language
+
+You can change GoChowdown default language in your Hugo configuration. This will translate all text built into the theme. Currently supported languages are: `en` (default), `de`, `fr`.
+
+The following is a `config.toml` example for using `fr` as the default language:
+
+```
+defaultContentLanguage = "fr"
+
+[languages]
+[languages.fr]
+weight = 1
+title = "Mon titre en Français"
+```
 
 ## License
 
