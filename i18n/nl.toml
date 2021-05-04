@@ -2,19 +2,19 @@
 # Copyright © 2021 Casper Meijn <casper@meijn.net>
 
 [yields]
-other = "Opbrengst"
+other = "Genoeg voor: {{.}}"
 
 [prepTime]
-other = "Bereidingstijd"
+other = "Bereidingstijd: {{.}}"
 
 [cookTime]
-other = "Baktijd"
+other = "Baktijd: {{.}}"
 
 [ingredients]
 other = "Ingrediënten"
 
 [directions]
-other = "Instructies"
+other = "Bereiding"
 
 [components]
 other = "Onderdelen"
