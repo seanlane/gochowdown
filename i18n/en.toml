@@ -1,11 +1,11 @@
 [yields]
-other = "Yields"
+other = "Yields: {{.}}"
 
 [prepTime]
-other = "Preparation time"
+other = "Preparation time: {{.}}"
 
 [cookTime]
-other = "Cooking time"
+other = "Cooking time: {{.}}"
 
 [ingredients]
 other = "Ingredients"

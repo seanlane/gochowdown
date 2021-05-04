@@ -30,17 +30,17 @@
     <div class="clearfix mt3">
       {{ with .Params.yield }}
       <div class="sm-col sm-col-2">
-          <h4 class="blue mt0 mb2 xs-center">{{ i18n "yields" }}: {{ . }}</h4>
+          <h4 class="blue mt0 mb2 xs-center">{{ i18n "yields" . }}</h4>
       </div>
       {{ end }}
       {{ with .Params.prepTime }}
       <div class="sm-col sm-col-2">
-        <h4 class="blue mt0 mb2 xs-center">{{ i18n "prepTime" }}: {{ . }}</h4>
+        <h4 class="blue mt0 mb2 xs-center">{{ i18n "prepTime" . }}</h4>
       </div>
       {{ end }}
       {{ with .Params.cookTime }}
       <div class="sm-col sm-col-2">
-        <h4 class="blue mt0 mb2 xs-center">{{ i18n "cookTime" }}: {{ . }}</h4>
+        <h4 class="blue mt0 mb2 xs-center">{{ i18n "cookTime" . }}</h4>
       </div>
       {{ end }}
     </div>
