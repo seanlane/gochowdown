@@ -2,7 +2,7 @@
 # Copyright © 2021 Casper Meijn <casper@meijn.net>
 
 [yields]
-other = "Opbrengst: {{.}}"
+other = "Genoeg voor: {{.}}"
 
 [prepTime]
 other = "Bereidingstijd: {{.}}"
@@ -14,7 +14,7 @@ other = "Baktijd: {{.}}"
 other = "Ingrediënten"
 
 [directions]
-other = "Instructies"
+other = "Bereiding"
 
 [components]
 other = "Onderdelen"
