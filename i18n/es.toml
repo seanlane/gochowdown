@@ -1,0 +1,83 @@
+[yields]
+other = "Raciones"
+
+[prepTime]
+other = "Tiempo de preparación"
+
+[cookTime]
+other = "Tiempo de cocción"
+
+[ingredients]
+other = "Ingredientes"
+
+[directions]
+other = "Instrucciones"
+
+[components]
+other = "Componentes"
+
+[this-is-a]
+other = "Esta es una"
+
+[component-based-recipe]
+other = "receta basada en componentes"
+
+[fancy-talk]
+other = "un término bonito para referirse a elaborar cada parte por separado, y luego combinarlas"
+
+[steps]
+other = "Pasos"
+
+[category]
+other = "Categoría"
+
+[cuisine]
+other = "Gastronomía"
+
+[tags]
+other = "Etiquetas"
+
+[inspired]
+other = "inspirado"
+
+[by]
+other = "por"
+
+[from]
+other = "de"
+
+[powered-by]
+other = "Utilizando"
+
+[for-the-home-chef]
+other = "Para el chef del hogar"
+
+[save-recipes]
+other = "Guarda tus recetas en segundos como texto"
+
+[create-beautiful]
+other = "Crea bonitas páginas para tus recetas de forma automática"
+
+[use-recipes]
+other = "Utiliza tus recetas en cualquier aplicación"
+
+[our-favorite]
+other = "nuestra favorita es"
+
+[share]
+other = "Compártelas con tu familia y amigos"
+
+[for-the-developer]
+other = "Para el desarrollador"
+
+[markdown-hugo]
+other = "Basado en Markdown + Hugo"
+
+[recipes-stored]
+other = "Las recetas se almacenan como texto plano, listas para modificar"
+
+[open-source]
+other = "Open source, todo está en GitHub"
+
+[contribute]
+other = "quieres contribuir"
