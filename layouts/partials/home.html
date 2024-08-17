@@ -3,7 +3,7 @@
     <div class="clearfix">
     {{ range sort (where .Site.RegularPages "Section" "recipes") "Title" }}
       <div class="sm-col sm-col-6 md-col-6 lg-col-4 xs-px1 xs-mb2">
-          <a class="block relative bg-blue" href="{{ .RelPermalink }}">
+          <a class="block relative bg-blue" href="{{ .Permalink }}">
             {{ if .Params.Image }}
               <div class="image ratio bg-cover" style="background-image:url({{.Permalink}}{{ .Params.Image }});"></div>
             {{ else }}

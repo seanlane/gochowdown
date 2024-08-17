@@ -16,11 +16,11 @@
   {{ if .Site.IsServer }}
     {{ $cssOpts := (dict "targetPath" "css/gochowdown.css" "enableSourceMap" true ) }}
     {{ $styles := resources.Get "scss/gochowdown.scss" | resources.ExecuteAsTemplate "style.gochowdown.css" . | toCSS $cssOpts }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
   {{ else }}
     {{ $cssOpts := (dict "targetPath" "css/gochowdown.css" ) }}
     {{ $styles := resources.Get "scss/gochowdown.scss" | resources.ExecuteAsTemplate "style.gochowdown.css" . | toCSS $cssOpts | minify | fingerprint }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
   {{ end }}
   
   {{ range .Site.Params.custom_css }}
